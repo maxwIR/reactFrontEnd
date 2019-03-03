@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import FeatList from './FeatList';
-import registerServiceWorker from './registerServiceWorker';
+import FeatsApp from "./FeatsApp";
+// import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
 <div>
-   <FeatList />
+   <FeatsApp />
 </div>,
    document.getElementById("root")
 );
