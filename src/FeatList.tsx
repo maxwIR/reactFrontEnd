@@ -5,21 +5,9 @@ interface ListState {
    feats: any[]
 }
 
-class FeatList extends React.Component<{}, ListState> {
+class FeatList extends React.Component<ListState, ListState> {
 	constructor(props: any) {
       super(props);
-      this.state = {
-			feats: [
-				{
-					name: "Dodge",
-					description: "Jump out of the way!"
-				},
-				{
-					name: "Weapon Finesse",
-					description: "You know your way around the weapon of your choice"
-				}
-         ]
-      };
       this.displayFeat = this.displayFeat.bind(this);
    }
    displayFeat(feat: any, i: number) {
@@ -33,7 +21,7 @@ class FeatList extends React.Component<{}, ListState> {
 		return (
          <div className="featList">
             <h2> Feat List </h2>
-            {this.state.feats.map(this.displayFeat)}
+            {this.props.feats.map(this.displayFeat)}
          </div>
 		)
 	}
