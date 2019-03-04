@@ -32,17 +32,22 @@ class FeatSearch extends React.Component <IFeatSearchProps> {
          <div className="featSearch">
             <h2>Search</h2>
             <form onSubmit={this.search}>
-               <span>
-                  Base Attack Bonus: <input type="text" name="bab"/> <br/>
-               </span>
-               <p>Caster Level:</p> <input type="text" name="cl"/> <br/>
-               <span>
-                  <p>
-                     Feats:
-                  </p>
-                  <input type="text" name="feats"/> <br/>
-               </span>
-               <input type="submit" value="Submit"/>
+               <div className="row">
+                  <div className="col-md-4">Base Attack Bonus:</div>
+                  <div className="col-md-4"><input type="text" name="bab"/></div>
+               </div>
+               <div className="row">
+                  <div className="col-md-4">Caster Level:</div>
+                  <div className="col-md-4"><input type="text" name="cl"/></div>
+               </div>
+               <div className="row">
+                  <div className="col-md-4">Feats:</div>
+                  <div className="col-md-4"><input type="text" name="fts"/></div>
+               </div>
+               <div className="row">
+                  <input className="col-md-2" type="submit" value="Search"/>
+               </div>
+
             </form>
          </div>
 		)
